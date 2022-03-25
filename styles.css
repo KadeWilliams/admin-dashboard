@@ -1,0 +1,49 @@
+.container {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+    border: 5px solid black;
+}
+.container > * {
+    border: 5px solid black;
+}
+.header > * {
+    height: 25vh;
+    border: 5px solid black;
+    grid-column: 1 / end;
+}
+.sidebar {
+    background-color: orange;
+    grid-column: 1 ;
+    grid-row: 1 / end;
+    height: 100vh;
+}
+.projects {
+    background-color: yellow;
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 40px;
+}
+.projects > * { 
+    border: 5px solid purple;
+    grid-auto-flow: row;
+    border-radius: 5%;
+}
+.announcements {
+    background-color: green;
+    grid-column: 5;
+    /* height: 20px; */
+}
+.trending {
+    background-color: blue;
+    grid-column: 5;
+    /* height: 20px; */
+}
+.top {
+    background-color: #fff;
+    grid-row: 1
+}
+.bottom {
+    background-color: #fff;
+    grid-row: 2;
+}
